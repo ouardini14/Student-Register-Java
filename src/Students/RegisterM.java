@@ -94,7 +94,7 @@ public class RegisterM extends JFrame {
 
 						try {
 							Class.forName("oracle.jdbc.OracleDriver");
-							conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+							conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", <password>);
 							String sql3 = "select  *from etudiant where CIN='"+CIN.getText()+"'OR CNE='"+CNE.getText()+"'";
 							pst3 = conn.prepareStatement(sql3);
 							ResultSet  rs3 = pst3.executeQuery();
