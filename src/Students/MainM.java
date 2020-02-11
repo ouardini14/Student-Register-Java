@@ -158,7 +158,7 @@ public class MainM extends JFrame {
 				try {
 
 					Class.forName("oracle.jdbc.OracleDriver");
-					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", <password>);
 					String a = "not";
 					if(rdbtnDevelopmentWeb.isSelected()==true){
 						JOptionPane.showMessageDialog(panel,rdbtnDevelopmentWeb.getText() +"is Selected");
