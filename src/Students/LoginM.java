@@ -144,7 +144,7 @@ public class LoginM extends JFrame {
 				
 		        try {
                     Class.forName("oracle.jdbc.OracleDriver");
-                    conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+                    conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system",<password>);
                     String sql2 = "select  *from etudiant where CIN='"+CIN.getText()+"'AND pwd_et='"+PasswordField.getText()+"'";
                     pst = conn.prepareStatement(sql2);
                     ResultSet  rs2 = pst.executeQuery();
