@@ -107,7 +107,7 @@ public class AdminM extends JFrame {
 
 				try {
 					Class.forName("oracle.jdbc.OracleDriver");
-					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", <password>);
 					String sql = "UPDATE etudiant SET nom='"+ Name.getText()+"' ,CIN='"+CIN.getText()+"',CNE='"+CNE.getText()+"',ville='"+Ville.getText()+"',PWD_et='"+Password.getText()+"', DATE_NAISSANCE=TO_DATE('"+Date.getText()+"','YYYY-MM-DD'), prenom='"+Prenom.getText()+"' where CIN='"+CIN.getText()+"'";
 					String sql9 = "commit";
 					pst = conn.prepareStatement(sql);
@@ -157,7 +157,7 @@ public class AdminM extends JFrame {
 
 				try {
 					Class.forName("oracle.jdbc.OracleDriver");
-					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", <password>);
 					String sql6 = "delete from etudiant where CIN='"+CIN.getText()+"'";
 					String sql7 = "commit";
 
@@ -200,7 +200,7 @@ public class AdminM extends JFrame {
 
 				try {
 					Class.forName("oracle.jdbc.OracleDriver");
-					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+					conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", <password>);
 					String sql2 = "select  *from etudiant where CIN='"+CIN.getText()+"'";
 					pst = conn.prepareStatement(sql2);
 					ResultSet  rs2 = pst.executeQuery();
@@ -318,7 +318,7 @@ public class AdminM extends JFrame {
 
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "anass_2018");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", <password>);
 			String sql8 = "select count(*) from etudiant";
 			pst8 = conn.prepareStatement(sql8);
 			ResultSet  rs8 = pst8.executeQuery();
